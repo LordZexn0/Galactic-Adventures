@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galactic Adventures-</title>
+  <meta name="description" content="Explore the Final Frontier with Galactic Adventures">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Galactic Adventures- A Space Tourism Company">
+<meta property="og:url" content="https://lucent-tiramisu-c1d0a6.netlify.app/">
+<meta property="fb:app_id" content="images/logo-large217.png" />
+<meta property="og:description" content="images/logo-large217.png">
+<meta property="og:image" content="images/logo-large217.png">
+<meta property="business:contact_data:street_address" content="Houston">
+<meta property="business:contact_data:locality" content="Houston">
+<meta property="business:contact_data:region" content="Texas">
+<meta property="business:contact_data:postal_code" content="77478">
+<meta property="business:contact_data:country_name" content="United States of America">
+<link rel="icon" type="image/x-icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="css/ionicons.css">
+  <link rel="stylesheet" href="css/bootstrap-extended.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/three.min.js" defer></script>
+  <script type="text/javascript" src="js/detector.js" defer></script>
+  <script id="vs" type="x-shader/x-vertex" defer>
+    varying vec2 vUv;
+    void main() {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+    }
+  </script>
+
+  <script id="fs" type="x-shader/x-fragment" defer>
+    uniform sampler2D map;
+    uniform vec3 fogColor;
+    uniform float fogNear;
+    uniform float fogFar;
+
+    varying vec2 vUv;
+    void main() {
+
+      float depth = gl_FragCoord.z / gl_FragCoord.w;
+      float fogFactor = smoothstep( fogNear, fogFar, depth );
+
+      gl_FragColor = texture2D( map, vUv );
+      gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+      gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+    }
+  </script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
+  <script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" defer></script>
+  <script src="js/jquery.main.js" defer></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21711145-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-21711145-1', { 'optimize_id': 'GTM-KLN4WBJ'});
+</script>
+<!--GET SITE CONTROL POPUP-->
+<script type="text/javascript" async
+  src="//l.getsitecontrol.com/d7o31z7e.js">
+</script>
+<!--END GET SITE CONTROL POPUP-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YL2LKNDW37"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YL2LKNDW37');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHLN1T92PF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KHLN1T92PF');
+
+  gtag('event', 'only_for_3rd_party', {'send_to': 'G-KHLN1T92PF'});
+</script>
+</head>
+
+<body class="homepage" data-spy="scroll" data-target="#nav">
+  <div id="wrapper">
+    <header id="header" data-spy="affix" data-offset-top="0" data-offset-bottom="0">
+      <div class="container">
+        <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <a class="navbar-brand change-color" href="#">
+              <picture class="LOGO GOES HERE">
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source srcset="images/logo-small.png, images/logo-small.png 2x" media="(max-width: 767px)">
+                <source srcset="images/logo-large217.png">
+                <!--[if IE 9]></video><![endif]-->
+                <img src="images/logo-large217.png" alt="GA">
+              </picture>
+             </a>
+          </div>
+          <a class="nav-opener change-color" href="#"><span></span></a>
+          <nav id="nav">
+            <div class="nav-container">
+              <a class="nav-opener" href="#"><span></span></a>
+              <div class="nav-holder">
+                <ul class="nav navbar-nav">
+                  <li><a href="#About-Us">About Us</a></li>
+                  <li><a href="#How-we-do-it">Basic Information</a></li>
+                  <li><a href="whatwedo">What we do</a></li>
+                  <li><a href="#Stuff-that-worked">Destinations</a></li>
+                  <li><a href="#Let’s-talk">Contact & Questions?</a></li>
+                  <li><a href="Sources.html">Sources</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </nav>
+      </div>
+    </header>
+    <main id="main" role="main">
+      <section class="top-inforamtiom">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 column">
+              <div class="text-block">
+                <div class="text-wrapper">
+                  <div class="holder">
+                    <!--h1>We build transformative experiences</h1-->
+                    <h1>Explore the Final Frontier with Galactic Adventures</h1>
+                    <p>where we strive to take everyone to space</p>
+                  </div>
+                  <div class="astronaut">
+                    <picture >
+                      <!--[if IE 9]><video style="display: none;"><![endif]-->
+                      <source srcset="images/image-astronaut-small.png, images/image-astronaut-small-2x.png 2x" media="(max-width: 767px)">
+                      <source srcset="images/image-astronaut.png">
+                      <!--[if IE 9]></video><![endif]-->
+                      <img src="images/image-astronaut.png" alt="image description">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <canvas id="canvas"></canvas>
+      </section>
+      <section class="content-cols" id="About-Us">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 col-sm-offset-1 title-col">
+              <h2>We're a Space Tourism Comapny made up by tech misfits, space-fanatics and<br> curious humans.</h2>
+            </div>
+            <div class="col-xs-12 col-sm-5 description">
+              	<p>At Galactic Adventures, we strive to make space travel a reality for all. Partnering with visionary entrepreneurs and companies, we turn dreams into reality, delivering innovative and inspiring space tourism experiences.</p>
+  				<p>With a team of experts including former astronauts, engineers, and scientists, we tackle the complex challenges of space travel with ease. Our integrated approach to strategy, design, and development ensures a seamless journey from concept to launch, and beyond.<br><br>We are dedicated to providing a safe and unforgettable space experience, pushing the boundaries of what's possible and leaving a lasting impact on our clients and their companies. Join us on this journey to the final frontier.</p>
+				<p>Not in a rush? Here’s a bit more about <a href="about">who we are.</a><br></p>
+            </div>
+          </div>
+        </div>
+        <div id="clouds"></div>
+        <div class="cloud-holder">
+         <img src="images/clouds.png" alt="image description" width="1768" height="522">
+       </div>
+      </section>
+      <div class="container" id="How-we-do-it">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="intro-section">
+              <h2>Mission Statement</h2>
+              <ul class="abbr-list list-unstyled">
+                <li>
+                  <span class="letter">1</span>
+                  <p><br>To make space travel accessible and achievable for people from all walks of life.</p>
+                </li>
+                <li>
+                  <span class="letter">2</span>
+                  <p><br>To provide a safe, comfortable, and unforgettable interplanetary experience for every traveler.</p>
+                </li>
+                <li>
+                  <span class="letter">3</span>
+                  <p><br>To inspire and educate the next generation of space enthusiasts and explorers.</p>
+                </li>
+              </ul>
+              <p><br></p><p>Interested? Here’s a bit more  <a href="about.html">about us.</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="stuff-section" id="Stuff-that-worked">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 column text-center">
+              <h2>Destinations</h2>
+              <div class="stuff-carousel load-more-holder">
+                <div class="slicked-intialized slick-slider">
+                  <div class="slide">
+                    <a href="Earth.html">
+                      <span class="hover-block">
+                        <span class="title">Planetary Orbit</span>
+                      </span>
+                      <span class="image-holder">
+                        <picture>
+                          <!--[if IE 9]><video style="display: none;"><![endif]-->
+                          <source srcset="images/Earth.jpg, images/Earth.jpg 2x" media="(max-width: 767px)">
+                          <source srcset="images/Earth.jpg">
+                          <!--[if IE 9]></video><![endif]-->
+                          <img src="images/Earth.jpg" alt="Planetary Orbit">
+                        </picture>
+                        ::after
+                      </span>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a href="moon.html">
+                      <span class="hover-block">
+                        <span class="title">Moon</span>
+                      </span>
+
+                      <span class="image-holder">
+                          <picture>
+                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                            <source srcset="images/Moon.jpg, images/Moon.jpg 2x" media="(max-width: 767px)">
+                            <source srcset="images/Moon.jpg">
+                            <!--[if IE 9]></video><![endif]-->
+                            <img src="images/Moon.jpg" alt="Moon">
+                            
+                          </picture>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a href="Mars.html">
+                      <span class="hover-block">
+                        <span class="title">Mars</span>
+                      </span>
+                      <span class="image-holder">
+                        <picture>
+                          <!--[if IE 9]><video style="display: none;"><![endif]-->
+                          <source srcset="images/Mars.jpg, images/Mars.jpg 2x" media="(max-width: 767px)">
+                          <source srcset="images/Mars.jpg">
+                          <!--[if IE 9]></video><![endif]-->
+                          <img src="images/Mars.jpg" alt="Mars">
+                        </picture>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <style>
+        #ulname {
+          display: none;
+          visibility: hidden;
+        }
+      </style>
+      <script>
+      function validateForm(form) {
+        var x = document.forms["contact_form"]["ulname"].value;
+        console.log(x);
+        if ( x == "" || x == null ){ // if the honeypot was ignored, it's a hu-mon
+          console.log('human!');
+          form.action="mail.php"; // link to process form and redirect to thank you
+        }
+        else{ // the honeypot was filled in, it's a robot
+          console.log('robot!');
+          form.action="thankyou" // link directly to thank you without actually processing form
+          return false;
+          }
+        }
+      </script>
+      <section class="form-section" id="Let’s-talk">
+        <form name="contact_form" action="mail.php" method="post" enctype="multipart/form-data" target-page="thankyou" class="step-form form-validation" onsubmit="validateForm(this);">
+          <fieldset>
+            <div class="container steps-holder">
+              <div class="row">
+                <div class="col-xs-12 text-center">
+                  <h2>Contact or Questions?</h2>
+                  <p>Check out <a href="whatwedo">what we do</a>, or drop your brief below.</p>
+                </div>
+              </div>
+              <div class="row steps-row">
+                <div class="col-xs-12 col-sm-6 col-md-offset-1 inputs-block">
+                  <div class="holder">
+                    <div class="field-holder required-holder">
+                    </div>
+                    <div class="field-holder required-holder">
+                      <input name="ufname" class="required" type="text" placeholder="My name is..." required>
+                      <input name="ulname" id="ulname" type="text" placeholder="My lastname is...">
+                    </div>
+                    <div class="field-holder required-holder">
+                      <input name="umail" class="required-email" type="email" placeholder="My email is..." required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 checkbox-block">
+                  <div class="required-holder check-list">
+                    <span class="label-col">What are you interested in:</span>
+                    <div class="check-row">
+                      <input data-type="at_least_one" name="needs[]" value="website" data-name="uniq____" id="id-check1" type="checkbox">
+                      <label for="id-check1">Planetary Orbit</label>
+                    </div>
+                    <div class="check-row">
+                      <input data-type="at_least_one" name="needs[]" value="mobile app" data-name="uniq____" id="id-check2" type="checkbox">
+                      <label for="id-check2">Moon</label>
+                    </div>
+                    <div class="check-row">
+                      <input data-type="at_least_one" name="needs[]" value="digital strategy" data-name="uniq____" id="id-check3" type="checkbox">
+                      <label for="id-check3">Mars</label>
+                    </div>
+                      <a href="#" class="next-step open item-link ion-ios-arrow-thin-right">Next step</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 text-center submit-col">
+                  <a href="#" class="prev-step open item-link ion-ios-arrow-thin-left">Previous step</a>
+                  <button type="submit" name="mail_submit" class="item-link ion-ios-arrow-thin-right">Send it our way</button>
+                  <input type="hidden" value="1" name="mail_submit"/>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      <div class="container">
+        <section class="logos-section">
+          <div class="row">
+            <div class="col-xs-12 col-md-3 col-md-offset-1">
+              <h3>Partnerships</h3>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-offset-0 col-md-7">
+              <ul class="logos-list list-unstyled">
+                <li>
+                  <p>NASA</p>
+                </li>
+                <li>
+                  <p>SpaceX</p>
+                </li>
+                <li>
+                  <p>Jet Propulsion Laboratory (JPL)</p>
+                </li>
+                <li>
+                  <p>Blue Orgin</p>
+                </li>
+                <li>
+                  <p>Virgin Galactic</p>
+                </li>
+                <li>
+                  <p>Boeing</p>
+                </li>
+                <li>
+                  <p>Orion Span</p>
+                </li>
+                <li>
+                  <p>Space Adventures</p>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="row align-bottom">
+          <div class="col-xs-12 col-sm-5 col-md-2 col-md-offset-1">
+            <p><strong>Houston TX</strong></p>
+          </div>
+          <div class="col-xs-12 col-sm-3 col-md-2">
+            <p><a href="tel:1-800-Space">1-800-Space</a></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-6 copyright-holder">
+                        <span class="copyright">&copy; Galactic Adventures 2023</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  </div>
+    
+      
+</body>
+</html>
